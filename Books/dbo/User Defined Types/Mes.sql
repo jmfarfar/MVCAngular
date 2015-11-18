@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[Mes]
+    FROM INT NOT NULL;
+

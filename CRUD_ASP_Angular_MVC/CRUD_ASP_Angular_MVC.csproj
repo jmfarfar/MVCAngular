@@ -159,6 +159,9 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\BookScripts\Controller.js" />
+    <Content Include="Scripts\BookScripts\Module.js" />
+    <Content Include="Scripts\BookScripts\Service.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\errors.json" />

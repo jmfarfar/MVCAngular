@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[Nivel]
+    FROM TINYINT NOT NULL;
+

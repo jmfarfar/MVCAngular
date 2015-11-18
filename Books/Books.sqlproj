@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Books</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{3b07c205-363d-4675-93f9-e21216a1275f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Books</RootNamespace>
+    <AssemblyName>Books</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AI</DefaultCollation>
+    <AnsiNulls>False</AnsiNulls>
+    <QuotedIdentifier>False</QuotedIdentifier>
+    <IsChangeTrackingOn>False</IsChangeTrackingOn>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <IsEncryptionOn>False</IsEncryptionOn>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+    <Trustworthy>False</Trustworthy>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <PageVerify>CHECKSUM</PageVerify>
+    <ServiceBrokerOption>DisableBroker</ServiceBrokerOption>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <Parameterization>SIMPLE</Parameterization>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <CompatibilityMode>100</CompatibilityMode>
+    <AnsiNullDefault>False</AnsiNullDefault>
+    <AnsiPadding>False</AnsiPadding>
+    <AnsiWarnings>False</AnsiWarnings>
+    <ArithAbort>False</ArithAbort>
+    <ConcatNullYieldsNull>False</ConcatNullYieldsNull>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DatabaseState>ONLINE</DatabaseState>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DefaultCursor>GLOBAL</DefaultCursor>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <TornPageDetection>False</TornPageDetection>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <Recovery>FULL</Recovery>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <CreateProjectFromDatabaseCompleted>True</CreateProjectFromDatabaseCompleted>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\User Defined Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\User Defined Types\ActividadNumero.sql" />
+    <Build Include="dbo\User Defined Types\Anio.sql" />
+    <Build Include="dbo\User Defined Types\CiudadSedeClave.sql" />
+    <Build Include="dbo\User Defined Types\Clave.sql" />
+    <Build Include="dbo\User Defined Types\ClaveActiv.sql" />
+    <Build Include="dbo\User Defined Types\ClaveIngreso.sql" />
+    <Build Include="dbo\User Defined Types\ClaveMoneda.sql" />
+    <Build Include="dbo\User Defined Types\ClavePais.sql" />
+    <Build Include="dbo\User Defined Types\ClaveSolicitud.sql" />
+    <Build Include="dbo\User Defined Types\ClienteClave.sql" />
+    <Build Include="dbo\User Defined Types\Comentario.sql" />
+    <Build Include="dbo\User Defined Types\Descripcion.sql" />
+    <Build Include="dbo\User Defined Types\Descripcion100.sql" />
+    <Build Include="dbo\User Defined Types\DescripcionCorta.sql" />
+    <Build Include="dbo\User Defined Types\EMail.sql" />
+    <Build Include="dbo\User Defined Types\Estatus.sql" />
+    <Build Include="dbo\User Defined Types\EstatusAus.sql" />
+    <Build Include="dbo\User Defined Types\EstatusClave.sql" />
+    <Build Include="dbo\User Defined Types\EstatusProyectoClave.sql" />
+    <Build Include="dbo\User Defined Types\Fecha.sql" />
+    <Build Include="dbo\User Defined Types\FormCompClave.sql" />
+    <Build Include="dbo\User Defined Types\HorasActividad.sql" />
+    <Build Include="dbo\User Defined Types\HorasAjuste.sql" />
+    <Build Include="dbo\User Defined Types\HorasAplicadas.sql" />
+    <Build Include="dbo\User Defined Types\Identificador_de_Autorización.sql" />
+    <Build Include="dbo\User Defined Types\Identificador_de_Baja.sql" />
+    <Build Include="dbo\User Defined Types\IdStk.sql" />
+    <Build Include="dbo\User Defined Types\Importe.sql" />
+    <Build Include="dbo\User Defined Types\Mes.sql" />
+    <Build Include="dbo\User Defined Types\NcClave.sql" />
+    <Build Include="dbo\User Defined Types\NcValor.sql" />
+    <Build Include="dbo\User Defined Types\Nivel.sql" />
+    <Build Include="dbo\User Defined Types\NombreActiv.sql" />
+    <Build Include="dbo\User Defined Types\NombreApellido.sql" />
+    <Build Include="dbo\User Defined Types\NombreCompleto.sql" />
+    <Build Include="dbo\User Defined Types\NumActividad.sql" />
+    <Build Include="dbo\User Defined Types\NumeroAjuste.sql" />
+    <Build Include="dbo\User Defined Types\NumeroAsignacion.sql" />
+    <Build Include="dbo\User Defined Types\PaisClave.sql" />
+    <Build Include="dbo\User Defined Types\Password.sql" />
+    <Build Include="dbo\User Defined Types\ProcesoClave.sql" />
+    <Build Include="dbo\User Defined Types\ProyectoClave.sql" />
+    <Build Include="dbo\User Defined Types\RolClave.sql" />
+    <Build Include="dbo\User Defined Types\RolClaveActiv.sql" />
+    <Build Include="dbo\User Defined Types\RolDescripcion.sql" />
+    <Build Include="dbo\User Defined Types\TextoCorreo.sql" />
+    <Build Include="dbo\User Defined Types\TipoAusencia.sql" />
+    <Build Include="dbo\User Defined Types\TipoBaja.sql" />
+    <Build Include="dbo\User Defined Types\TipoNegocioClave.sql" />
+    <Build Include="dbo\User Defined Types\TipoPersona.sql" />
+    <Build Include="dbo\User Defined Types\TipoRelacionTrans.sql" />
+    <Build Include="dbo\User Defined Types\TipoUOClave.sql" />
+    <Build Include="dbo\User Defined Types\TipoValidoRH.sql" />
+    <Build Include="dbo\User Defined Types\TransaccionProcesoClave.sql" />
+    <Build Include="dbo\User Defined Types\UOClave.sql" />
+    <Build Include="dbo\User Defined Types\Usuario.sql" />
+    <Build Include="dbo\User Defined Types\ValorAnio.sql" />
+    <Build Include="dbo\User Defined Types\ValorDia.sql" />
+    <Build Include="dbo\User Defined Types\ValorEntrada.sql" />
+    <Build Include="dbo\User Defined Types\ValorEsfuerzoTotal.sql" />
+    <Build Include="dbo\User Defined Types\ValorIngreso.sql" />
+    <Build Include="dbo\User Defined Types\ValorMoneda.sql" />
+    <Build Include="dbo\User Defined Types\ValorPorcentaje.sql" />
+    <Build Include="dbo\User Defined Types\ValorSemana.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[Estatus]
+    FROM TINYINT NOT NULL;
+

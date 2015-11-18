@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[NcClave]
+    FROM VARCHAR (4) NOT NULL;
+

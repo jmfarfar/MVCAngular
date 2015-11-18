@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[EMail]
+    FROM VARCHAR (100) NOT NULL;
+

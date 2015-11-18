@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[IdStk]
+    FROM VARCHAR (6) NOT NULL;
+

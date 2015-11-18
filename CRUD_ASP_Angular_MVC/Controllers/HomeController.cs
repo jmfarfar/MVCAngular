@@ -97,7 +97,7 @@ namespace CRUD_ASP_Angular_MVC.Controllers
             }
             else
             {
-                return "Invalid book record";
+                return "Invalid operation";
             }
         }        
     }

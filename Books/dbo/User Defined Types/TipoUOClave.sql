@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[TipoUOClave]
+    FROM VARCHAR (5) NOT NULL;
+
